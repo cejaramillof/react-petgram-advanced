@@ -5,3 +5,7 @@
 - `node dist/main.js`
 - `npm i -D html-webpack-plugin` and create webpack.config.js
 - `npm i -D webpack-dev-server`
+- `npm i react react-dom`
+
+To start using jsx need install loader or transpiler.
+- `npm install @babel/core @babel/preset-env @babel/preset-react babel-loader` with preset-env transform code in the lastest version of js accepted by ecma committee, and can select browsers to support
