@@ -13,3 +13,7 @@ To start using jsx need install loader or transpiler.
 - `npm i styled-components`
 - `npm i -D babel-plugin-styled-components` and add to webpack.config.js
 - `npm i react-icons`
+- logo
+-- Create SVG [here](https://maketext.io/)
+-- Optimize SVG [here](https://jakearchibald.github.io/svgomg/)
+-- SVG Playground to convert in component [here](https://github.com/smooth-code/svgr)
