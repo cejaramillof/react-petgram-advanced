@@ -18,7 +18,6 @@ To start using jsx need install loader or transpiler.
 -- Optimize SVG [here](https://jakearchibald.github.io/svgomg/)
 -- SVG Playground to convert in component [here](https://github.com/smooth-code/svgr)
 
-
 ## Hooks (100% backward compatible with class, improve babel transpilation, improve performance )
 - useState (to add local storage to component)
 - useEffect (to execute functión each render of component)
@@ -32,3 +31,8 @@ To start using jsx need install loader or transpiler.
 - useLayoutEffect
 - useDebugValue (access to values without console.log)
 - can create custom hooks
+
+
+- `npm i intersection-observer` polyfill to support in old browsers
+- `npm install @babel/plugin-syntax-dynamic-import -D` and add '@babel/plugin-syntax-dynamic-import' to plugins in webpack.config.js to add support dynamic imports in babel, now not is needed
+- `npm install babel-eslint -D` and add parser to package.json for add support to eslint to experimental features
