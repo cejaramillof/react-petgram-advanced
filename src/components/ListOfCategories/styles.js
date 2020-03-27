@@ -1,12 +1,15 @@
-import styled from 'styled-components'
-import { slideIn } from '../../styles/animation'
+import styled, { css } from 'styled-components'
+import { slideIn, skeletonAnimation } from '../../styles/animation'
 
 export const List = styled.ul`
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
   width: 100%;
-  &.fixed {
+  ${skeletonAnimation}
+
+  /* &.fixed { */
+  ${props => props.fixed && css`
     background: #fff;
     border-radius: 60px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
@@ -20,6 +23,9 @@ export const List = styled.ul`
     transform: scale(.5);
     z-index: 1;
     ${slideIn}
+  `}
+
+
   }
 `
 
