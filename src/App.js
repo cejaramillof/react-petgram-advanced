@@ -5,6 +5,7 @@ import { ListOfCategories } from './components/ListOfCategories'
 import { Logo } from './components/Logo'
 import { ListOfPhotoCards } from './containers/ListOfPhotoCards'
 import { PhotoCardWithQuery } from './containers/PhotoCardWithQuery'
+import { ListOfPhotoCardsWithQuery } from './containers/ListOfPhotoCardsWithQuery'
 
 export const App = () => {
   const urlParams = new window.URLSearchParams(window.location.search)
@@ -20,7 +21,7 @@ export const App = () => {
           ? <PhotoCardWithQuery id={detailId} />
           : <>
             <ListOfCategories />
-            <ListOfPhotoCards categoryId={3} />
+            <ListOfPhotoCardsWithQuery categoryId={2} />
           </>
       }
     </>

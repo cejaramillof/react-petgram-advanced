@@ -1,11 +1,12 @@
+// Convert HoC in RenderProps
 import React from 'react'
-import { PhotoCard } from '../components/PhotoCard'
+import { ListOfPhotoCardsComponent } from '../components/ListOfPhotoCards'
 import { Query } from 'react-apollo' // to use render props
 import { gql } from 'apollo-boost' // write querys with graphql
 
 const query = gql`
-  query getSinglePhoto($id:ID!) {
-    photo(id:$id) {
+  query getPhotos($categoryId: ID) {
+    photos(categoryId: $categoryId) {
       id
       categoryId
       src
@@ -16,15 +17,16 @@ const query = gql`
   }
 `
 
-export const PhotoCardWithQuery = ({ id }) => (
-  <Query query={query} variables={{ id }}>
+export const ListOfPhotoCardsWithQuery = ({ categoryId }) => (
+  <Query query={query} variables={{ categoryId }}>
     {renderProp}
   </Query>
 )
 
+// Render Props
 const renderProp = ({ loading, error, data }) => {
+  console.log(data)
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error! ⛔</p>
-  const { photo = {} } = data
-  return <PhotoCard {...photo} />
+  return <ListOfPhotoCardsComponent data={data} />
 }
