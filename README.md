@@ -17,3 +17,18 @@ To start using jsx need install loader or transpiler.
 -- Create SVG [here](https://maketext.io/)
 -- Optimize SVG [here](https://jakearchibald.github.io/svgomg/)
 -- SVG Playground to convert in component [here](https://github.com/smooth-code/svgr)
+
+
+## Hooks (100% backward compatible with class, improve babel transpilation, improve performance )
+- useState (to add local storage to component)
+- useEffect (to execute functión each render of component)
+- useContext (to access to context api to have global values without by props)
+
+- useReducer (update component state like redux)
+- useCallback
+- useMemo
+- useRef (get references from dom elements)
+- useImperativeHandle
+- useLayoutEffect
+- useDebugValue (access to values without console.log)
+- can create custom hooks
