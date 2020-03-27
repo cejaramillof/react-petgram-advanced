@@ -12,3 +12,4 @@ To start using jsx need install loader or transpiler.
 - `npm i -D standard` js and react linter
 - `npm i styled-components`
 - `npm i -D babel-plugin-styled-components` and add to webpack.config.js
+- `npm i react-icons`

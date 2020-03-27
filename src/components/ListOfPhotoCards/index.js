@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { PhotoCard } from '../PhotoCard'
-import { List, Item } from '../ListOfCategories/styles'
+import { List, Item } from './styles'
 
 export const ListOfPhotoCards = () => {
   return (
