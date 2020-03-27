@@ -19,6 +19,11 @@ export const fadeIn = ({ time = '1s', type = 'ease' } = {}) =>
   css`animation: ${time} ${fadeInKeyFrames} ${type}`
 
 */
+
+export const Article = styled.article`
+  min-height: 200px;
+`
+
 export const ImgWrapper = styled.div`
   border-radius: 10px;
   display: block;
