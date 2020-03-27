@@ -34,5 +34,9 @@ To start using jsx need install loader or transpiler.
 
 
 - `npm i intersection-observer` polyfill to support in old browsers
-- `npm install @babel/plugin-syntax-dynamic-import -D` and add '@babel/plugin-syntax-dynamic-import' to plugins in webpack.config.js to add support dynamic imports in babel, now not is needed
-- `npm install babel-eslint -D` and add parser to package.json for add support to eslint to experimental features
+- `npm i @babel/plugin-syntax-dynamic-import -D` and add '@babel/plugin-syntax-dynamic-import' to plugins in webpack.config.js to add support dynamic imports in babel, now not is needed
+- `npm i babel-eslint -D` and add parser to package.json for add support to eslint to experimental features
+
+- `npm i apollo-boost` to beginning connection with Apollo server without configuration
+- `npm i react-apollo` integration Apollo with react
+- `npm i graphql`
