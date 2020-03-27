@@ -10,3 +10,5 @@
 To start using jsx need install loader or transpiler.
 - `npm install @babel/core @babel/preset-env @babel/preset-react babel-loader` with preset-env transform code in the lastest version of js accepted by ecma committee, and can select browsers to support
 - `npm i -D standard` js and react linter
+- `npm i styled-components`
+- `npm i -D babel-plugin-styled-components` and add to webpack.config.js
