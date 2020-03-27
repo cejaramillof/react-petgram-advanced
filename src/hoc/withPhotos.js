@@ -1,15 +1,7 @@
 import { graphql } from 'react-apollo'
-import { gql } from 'apollo-boost' // to make queries like a string
+import { GET_ALL_PHOTOS } from '../containers/ListOfPhotoCardsWithQuery'
 
-export const withPhotos = graphql(gql`
-  query getPhotos($categoryId: ID) {
-    photos(categoryId: $categoryId) {
-      id
-      categoryId
-      src
-      likes
-      userId
-      liked
-    }
-  }
-`)
+// HoC Función que se le pasa como parametro un Componente y
+// devuelve otro componente, con mejoras o con props injectadas
+// Nos permite envolver el componente, y recuperar
+export const withPhotos = graphql(GET_ALL_PHOTOS)
