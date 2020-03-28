@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Category } from '../Category'
-
 // import { categories as mockCategories } from '../../../api/db.json'
 import { List, Item } from './styles'
 import { useGetData } from '../../hooks/useGetData'
