@@ -24,7 +24,6 @@ export const ListOfPhotoCardsWithQuery = ({ categoryId }) => (
 
 // Render Props
 const renderProp = ({ loading, error, data }) => {
-  console.log(data)
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error! ⛔</p>
   return <ListOfPhotoCardsComponent data={data} />
