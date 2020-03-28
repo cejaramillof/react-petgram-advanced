@@ -6,7 +6,7 @@ export const List = styled.ul`
   overflow: scroll;
   overflow-y: hidden;
   width: 100%;
-  ${skeletonAnimation}
+  // ${skeletonAnimation}
 
   /* &.fixed { */
   ${props => props.fixed && css`

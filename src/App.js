@@ -5,6 +5,7 @@ import { Logo } from './components/Logo'
 import { Home } from './components/Pages/Home'
 import { Router } from '@reach/router'
 import { Detail } from './components/Pages/Detail'
+import { NavBar } from './components/NavBar'
 
 export const App = () => {
   // const urlParams = new window.URLSearchParams(window.location.search)
@@ -19,6 +20,7 @@ export const App = () => {
         <Home path='/pet/:categoryId' />
         <Detail path='/detail/:id' />
       </Router>
+      <NavBar />
     </>
   )
 }
