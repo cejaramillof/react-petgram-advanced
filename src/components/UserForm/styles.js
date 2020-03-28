@@ -17,6 +17,10 @@ export const Input = styled.input`
   padding: 8px 4px;
   display: block;
   width: 100%;
+  &[disabled] {
+    opacity: .3;
+    cursor: wait;
+  }
 `
 
 export const Button = styled.button`
@@ -27,4 +31,15 @@ export const Button = styled.button`
   display: block;
   width: 100%;
   text-align: center;
+  &[disabled] {
+    opacity: .3;
+    cursor: wait;
+  }
+`
+
+export const Error = styled.p`
+  text-align: center;
+  color: red;
+  font-size: 14px;
+  padding-top: 1em;
 `
