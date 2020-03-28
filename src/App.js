@@ -2,10 +2,17 @@
 import React from 'react'
 import { GlobalStyle } from './styles/GlobalStyle'
 import { Logo } from './components/Logo'
-import { Home } from './components/Pages/Home'
+import { Home } from './Pages/Home'
 import { Router } from '@reach/router'
-import { Detail } from './components/Pages/Detail'
+import { Detail } from './Pages/Detail'
 import { NavBar } from './components/NavBar'
+import { Favs } from './Pages/Favs'
+import { NotRegistered } from './Pages/NotRegistered'
+import { Profile } from './Pages/Profile'
+
+const UserLogged = ({ children }) => {
+  return children({ isAuth: false })
+}
 
 export const App = () => {
   // const urlParams = new window.URLSearchParams(window.location.search)
@@ -20,6 +27,20 @@ export const App = () => {
         <Home path='/pet/:categoryId' />
         <Detail path='/detail/:id' />
       </Router>
+      <UserLogged>
+        {
+          ({ isAuth }) =>
+            isAuth
+              ? <Router>
+                <Favs path='favs' />
+                <Profile path='user' />
+              </Router>
+              : <Router>
+                <NotRegistered path='favs' />
+                <NotRegistered path='user' />
+              </Router>
+        }
+      </UserLogged>
       <NavBar />
     </>
   )
