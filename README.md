@@ -40,3 +40,5 @@ To start using jsx need install loader or transpiler.
 - `npm i apollo-boost` to beginning connection with Apollo server without configuration
 - `npm i react-apollo` integration Apollo with react
 - `npm i graphql` and configure in index.js
+
+- `npm i @reach/router`
