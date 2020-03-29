@@ -42,3 +42,5 @@ To start using jsx need install loader or transpiler.
 - `npm i graphql` and configure in index.js
 
 - `npm i @reach/router`
+
+- `npm install react-helmet`
