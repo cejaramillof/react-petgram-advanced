@@ -31,5 +31,5 @@ const renderProp = ({ loading, error, data }) => {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error! ⛔</p>
   const { photo = {} } = data
-  return <PhotoCard {...photo} />
+  return <PhotoCard {...photo} loading={loading} />
 }
