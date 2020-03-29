@@ -4,7 +4,7 @@ import { Category } from '../Category'
 import { List, Item } from './styles'
 import { useGetData } from '../../hooks/useGetData'
 
-export const ListOfCategories = () => {
+const ListOfCategoriesComponent = () => {
   const [showFixed, setShowFixed] = useState(false)
   const { data: categories, loading } = useGetData('https://petgram-server.javierfuentesm.now.sh/categories')
 
@@ -41,3 +41,5 @@ export const ListOfCategories = () => {
     </>
   )
 }
+
+export const ListOfCategories = React.memo(ListOfCategoriesComponent)
