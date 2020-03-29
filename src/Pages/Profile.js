@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { Context } from '../Context'
 import { Button } from '../components/SubmitButton'
 
-
 export const Profile = () => {
   const { removeAuth } = useContext(Context)
   return (
