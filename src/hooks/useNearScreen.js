@@ -6,7 +6,7 @@ export function userNearScreen () {
 
   useEffect(function () {
     Promise.resolve(
-      typeof window.IntersectionObserver !== 'undefined'
+      typeof window.IntersectionObserver == 'undefined'
         ? window.IntersectionObserver
         : import('intersection-observer')
     ).then(() => {
