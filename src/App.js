@@ -1,22 +1,23 @@
 
-import React, { useContext } from 'react'
+import React, { useContext, Suspense } from 'react'
 import { GlobalStyle } from './styles/GlobalStyle'
 import { Logo } from './components/Logo'
-import { Home } from './Pages/Home'
+import { Home } from './pages/Home'
 import { Router, Redirect } from '@reach/router'
-import { Detail } from './Pages/Detail'
+import { Detail } from './pages/Detail'
 import { NavBar } from './components/NavBar'
-import { Favs } from './Pages/Favs'
-import { NotRegistered } from './Pages/NotRegistered'
-import { Profile } from './Pages/Profile'
+// import Favs from './Pages/Favs'
+import { NotRegistered } from './pages/NotRegistered'
+import { Profile } from './pages/Profile'
 import { Context } from './Context'
-import { NotFound } from './Pages/NotFound'
+import { NotFound } from './pages/NotFound'
 
 /*
 const UserLogged = ({ children }) => {
   return children({ isAuth: false })
 }
 */
+const Favs = React.lazy(() => import('./pages/Favs'))
 
 export const App = () => {
   const { isAuth } = useContext(Context)
@@ -24,7 +25,7 @@ export const App = () => {
   // const detailId = urlParams.get('detail')
 
   return (
-    <>
+    <Suspense fallback={<div />}>
       <Logo />
       <GlobalStyle />
       <Router>
@@ -57,6 +58,6 @@ export const App = () => {
       </Context.Consumer>
       */}
       <NavBar />
-    </>
+    </Suspense>
   )
 }
