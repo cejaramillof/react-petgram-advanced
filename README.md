@@ -44,3 +44,4 @@ To start using jsx need install loader or transpiler.
 - `npm i @reach/router`
 
 - `npm install react-helmet`
+- `npm i -D prop-types`
