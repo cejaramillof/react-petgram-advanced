@@ -47,3 +47,4 @@ To start using jsx need install loader or transpiler.
 - `npm i -D prop-types`
 - `npm i -D webpack-pwa-manifest` and config in webpack.config
 - `npm i -D workbox-webpack-plugin` and config in webpack.config - pack utilitys from google, to create service workers and offline support
+- `npm i -D cypress` and configure cypress.json

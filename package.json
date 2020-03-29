@@ -9,7 +9,8 @@
         "lint": "standard",
         "server": "webpack-dev-server --history-api-fallback",
         "server:dev": "webpack --mode development && npx serve dist -s",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "cypress open",
+        "testDefault": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "",
@@ -21,6 +22,7 @@
         "babel-eslint": "^10.1.0",
         "babel-loader": "^8.1.0",
         "babel-plugin-styled-components": "^1.10.7",
+        "cypress": "^4.2.0",
         "html-webpack-plugin": "^4.0.2",
         "prop-types": "^15.7.2",
         "standard": "^14.3.3",
